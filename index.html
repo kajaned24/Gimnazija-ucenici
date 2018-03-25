@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Web</title>
+	<title>Bivsi ucenici</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,20 +14,45 @@
 </head>
 <body style="background-color:#2A2333">
 	<nav>
-		<ul>
-			<li id="first"><a href="">1926</a></li>
-			<hr>
-			<li class=""><a href="">1927</a></li>
-			<hr>
-			<li><a href="">1928</a></li>
-			<hr>
-			<li><a href="">1929</a></li>
-			<hr>
-			<li><a href="">1930</a></li>
-			<hr>
-		</ul>	
-	</nav>
+		<div class="text">
+			<p>Možete pretražiti godine generacija.</p>
+		</div>
+		<form role="search">
+    		<div class="input-group">
+        		<input type="text" class="form-control" id="year" placeholder="Search">        		
+        		<button type="submit" class="btn btn-default input-group-btn" onClick="search()">Pretraži</button>
+   			 </div>
+		</form>
 
+		<ul id="year-list"></ul>
+
+		<script type="text/javascript">
+			var ul = document.getElementById('year-list');
+			var currentYear = (new Date()).getFullYear();
+
+			for (var i = 1926; i <= currentYear; i++) 
+			{
+
+				var li = document.createElement('li');
+				var hr = document.createElement('hr');
+				var a = document.createElement('a');
+				li.setAttribute("id", i);
+				li.appendChild(a);
+				a.innerHTML = i;
+				a.style.color = "white";
+				ul.appendChild(li);
+				ul.appendChild(hr);
+			}
+
+			function search() {
+				var val = document.getElementById('year').value;
+				window.location.hash = val;
+				document.getElementById('year').innerHTML = "";
+				window.location.hash = "";	
+			}
+
+		</script>
+	</nav>
 
 </body>
 </html>

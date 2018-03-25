@@ -2,6 +2,8 @@ nav {
 	width: 33%;
 	height: 100%;
 	background-color: #2E2739;
+	position: fixed;
+	overflow-y: scroll;
 }
 
 nav li {
@@ -34,4 +36,22 @@ hr {
 	margin: auto;
 	width:85%;
 	opacity: .4;
+}
+
+.text {
+	color: white;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+}
+
+.input-group {
+	width: 80%;
+	margin: auto;
+}
+
+.input-group-btn {
+	border-radius: 0;
 }
