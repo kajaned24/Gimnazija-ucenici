@@ -9,10 +9,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">        	
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<style type="text/css">
+		#pozadina {
+			background-image: url('images/Papyrus_PNG_Clipart_Image.png');
+		}
+		.image {
+			width: 60%;
+			height: 80%;
+			background-size: cover  ;                     
+    		position: relative;
+    		margin-left: 500px;
+    		margin-top: 50px;
+
+		}
+	</style>
 
 </head>
-<body style="background-color:#2A2333">
+<body class="container-fluid">
+	<div class="col-md-4">
 	<nav>
 		<div class="text">
 			<p>Možete pretražiti godine generacija.</p>
@@ -32,16 +48,17 @@
 
 			for (var i = 1926; i <= currentYear; i++) 
 			{
-
 				var li = document.createElement('li');
 				var hr = document.createElement('hr');
 				var a = document.createElement('a');
 				li.setAttribute("id", i);
 				li.appendChild(a);
-				a.innerHTML = i;
+				a.innerHTML = i + "/" + (i+1).toString().substr(2,3);
 				a.style.color = "white";
 				ul.appendChild(li);
 				ul.appendChild(hr);
+
+				
 			}
 
 			function search() {
@@ -53,6 +70,11 @@
 
 		</script>
 	</nav>
+	</div>
+	<div class="col-md-8 image" id="pozadina">
+		
+
+	</div>
 
 </body>
 </html>

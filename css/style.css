@@ -1,9 +1,10 @@
 nav {
-	width: 33%;
+	width: 30%;
 	height: 100%;
-	background-color: #2E2739;
+	background-color: #60241C;
 	position: fixed;
 	overflow-y: scroll;
+	margin-left: -30px;
 }
 
 nav li {
@@ -55,3 +56,10 @@ hr {
 .input-group-btn {
 	border-radius: 0;
 }
+
+.main-content {
+	width: 70%;
+	float: right;
+	height: 100%;
+}
+
