@@ -1,7 +1,10 @@
+body {
+	background: linear-gradient(to right, #60241c 14%, #d2877c 155%);
+}
+
 nav {
 	width: 30%;
 	height: 100%;
-	background-color: #60241C;
 	position: fixed;
 	overflow-y: scroll;
 	margin-left: -30px;
@@ -35,7 +38,7 @@ nav ul li a:hover {
 hr {
 	background-color: white;
 	margin: auto;
-	width:85%;
+	width: 85%;
 	opacity: .4;
 }
 
@@ -57,9 +60,4 @@ hr {
 	border-radius: 0;
 }
 
-.main-content {
-	width: 70%;
-	float: right;
-	height: 100%;
-}
 
